@@ -80,11 +80,11 @@
 // })
 
 
-//STEP 9
+//STEP 9 - concat two arrays into movies array, display movies in reverse sorted order
 // let movieList = ['Dune', 'Serendipity', 'Reds', 'Avatar', 'Oppenheimer', 'Living', 'Origin']
 // let leastFavMovies = ['Maestro', 'A Star is Born', 'Moneyball']
 // let movies = movieList.concat(leastFavMovies);
-// movies.sort().reverse();
+// movies.sort().reverse();             // need to sort first, then reverse
 // movies.forEach((movie) => {
 //     console.log(movie)
 // })
@@ -107,31 +107,73 @@
 
 
 //STEP 12 - Programmatically retrieve the movies in your array that you do not like and return their indices. 
-//   Then,using those indices, programmatically add movies that you do like.
+//   Then, using those indices, programmatically add movies that you do like.
+// let movieList = ['Dune', 'Serendipity', 'Reds', 'Avatar', 'Oppenheimer', 'Living', 'Origin']
+// let leastFavMovies = ['Maestro', 'A Star is Born', 'Moneyball']
+// let otherFavMovies = ['Mission Impossible', '007', 'Star Wars']
+// let movies = movieList.concat(leastFavMovies);          // combined all movies into one array
+// console.log(`Current Movie List: ${movies}`)
+// let j = 0;
+// for (let i=0; i<movies.length; i++) {                   // replace the least favorite movies with new favorites
+//     if (leastFavMovies.includes(movies[i])) {
+//         movies[i] = otherFavMovies[j];
+//         j++;
+//     }
+// }
+// console.log(`Least Favorite Movies: ${leastFavMovies}`)
+// console.log(`Replaced Movie List: ${movies}`)
 
 
-
-//STEP 13 - use filter() function
-
+//STEP 13 - loop thru the array and use filter() function to display movie names
+// movies = [['Oppenheimer', 1], ['Reds', 2], ['Dune', 3], ['Avatar', 4], ['Serendipity', 5]];
+// movies.forEach(movie => {
+//     console.log(movie.filter(item => typeof item === 'string'))
+// })
 
 
 //STEP 14 - showEmployee anonymous function - pass in employees array as a parameter
-
+// const showEmployee = function(arr) {
+//     console.log('Employees:', '\n\n')
+//     arr.forEach(item => console.log(item));
+// };
+// let employees = ['ZAK', 'JESSICA', 'MARK', 'FRED', 'SALLY'];
+// showEmployee (employees);
 
 
 //STEP 15 - filterValues function - filter false, null, 0 and blank values from an array
-
-
+// function filterValues(array) {
+//     let filteredArray = array.filter((item) => {
+//         return (((typeof item === 'string') && (item != "")) || ((typeof item === 'number') && (item != 0)) || (item === true))
+//     })
+//     return filteredArray;
+// }
+// console.log(filterValues([58, '', 'abcd', true, null, false, 0]))
 
 
 //STEP 16 - function to get a random item from an array - test with a numeric array with 10 numbers
-
-
-
+// let randomIndex;
+// function getRandomNumber(array) {
+//     randomIndex = Math.floor(Math.random() * 10);
+//     return(array[randomIndex]);
+// }
+// numArray = [34, 12, 332, 773, 23, 11, 90, 101, 987, 678];
+// console.log(`Array values are: ${numArray}`);
+// console.log(`A random number from the Array is: ${getRandomNumber(numArray)}`);
 
 
 //STEP 17 - function to get the largest number from a numeric array
-
+// function getMaxNumber(array) {
+//     maxNum = array[0];
+//     for (let i=1; i<array.length; i++) {
+//         if (array[i] > maxNum) {
+//             maxNum = array[i]
+//         } 
+//     }
+//     return maxNum;
+// }
+// numArray = [34, 56, 12, 332, 773, 23, 11, 20, 90, 101, 987, 678];
+// console.log(`Array values are: ${numArray}`);
+// console.log(`The largest number from the Array is: ${getMaxNumber(numArray)}`);
 
 
 
